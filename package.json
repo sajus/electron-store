@@ -1,12 +1,12 @@
 {
-  "name": "electron-config",
+  "name": "electron-config-remote",
   "version": "0.2.2",
-  "description": "Simple config handling for your Electron app or module",
+  "description": "Hack to fix remote issue in sindresorhus/electron-config",
   "license": "MIT",
-  "repository": "sindresorhus/electron-config",
+  "repository": "sajus/electron-store",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
+    "name": "Saju Sasidharan",
+    "email": "saju4u@gmail.com",
     "url": "sindresorhus.com"
   },
   "scripts": {
