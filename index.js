@@ -5,7 +5,17 @@ const Conf = require('conf');
 class ElectronConfig extends Conf {
 	constructor(opts) {
 		opts = Object.assign({name: 'config'}, opts);
-		opts.cwd = (electron.app || electron.remote.app).getPath('userData');
+
+		try {
+			opts.cwd = electron.remote.app.getPath('userData');
+		} catch(e) {
+			try {
+				opts.cwd = electron.app.getPath('userData');
+			} catch(e) {
+				opts.cwd = ''
+			}
+		}
+
 		opts.configName = opts.name;
 		delete opts.name;
 		super(opts);
